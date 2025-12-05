@@ -12,8 +12,100 @@
 Make sure Nodejs 20 or above is installed on your system and then go to Google's Gemini-CLI page for the installation info on [gemini-cli](https://github.com/google-gemini/gemini-cli)
 Or if you prefer to just 'GO FOR IT' without reading all that is to be learned on their page;
 - **Copy the files in the .gemini folder here into the .gemini folder in your home/user/ folder**: https://github.com/AjarnSpencer/youtube-gemini-extension/tree/main/.gemini
+
+## YouTube Extension
+
+This extension provides commands to search YouTube and retrieve video transcripts directly from the Gemini CLI.
+
+### Installation
+
+To install and set up the YouTube extension, follow these steps:
+
+1.  **Clone the `gemini-cli` repository:**
+    ```bash
+    git clone https://github.com/google-gemini/gemini-cli.git
+    cd gemini-cli
+    ```
+    (If you already have a fork, ensure it's up to date and navigate to your local clone.)
+
+2.  **Navigate to the extensions directory:**
+    ```bash
+    cd .gemini/extensions/youtube
+    ```
+
+3.  **Create a Python virtual environment:**
+    ```bash
+    python3 -m venv venv
+    ```
+
+4.  **Activate the virtual environment:**
+    ```bash
+    source venv/bin/activate
+    ```
+
+5.  **Install the required Python packages:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+6.  **Ensure the `yt_tool.py` script uses the virtual environment's Python interpreter.**
+    The shebang line in `yt_tool.py` should be updated to point to the virtual environment's Python. This should already be configured if you're using the version I helped set up. Verify the first line of `yt_tool.py` is:
+    ```
+    #!/home/cicada/.gemini/extensions/youtube/venv/bin/python
+    ```
+    (Note: The path `/home/cicada/.gemini/` might vary depending on your installation location. Adjust accordingly.)
+
+### Usage
+
+Once installed, you can use the YouTube extension commands:
+
+*   **Search YouTube:**
+    ```
+    /youtube:search "your search query"
+    ```
+    Example: `/youtube:search "the best tacos in tijuana"`
+
+*   **Get Video Transcript:**
+    ```
+    /youtube:transcript "video URL"
+    ```
+    Example: `/youtube:transcript "https://www.youtube.com/watch?v=totqat8vAIw"`
+
+### Committing to GitHub
+
+After setting up the extension locally and verifying its functionality, you can commit these changes to your GitHub fork:
+
+1.  **Navigate back to the root of your `gemini-cli` repository:**
+    ```bash
+    cd /path/to/your/gemini-cli-fork
+    ```
+
+2.  **Add the new and modified files to your Git staging area:**
+    ```bash
+    git add .gemini/extensions/youtube/gemini-extension.json
+    git add .gemini/extensions/youtube/commands/search.toml
+    git add .gemini/extensions/youtube/commands/transcript.toml
+    git add .gemini/extensions/youtube/scripts/yt_tool.py
+    git add .gemini/extensions/youtube/requirements.txt
+    git add README.md
+    ```
+    (Note: Do NOT `git add .gemini/extensions/youtube/venv/` as virtual environments should not be committed.)
+
+3.  **Commit your changes:**
+    ```bash
+    git commit -m "feat: Add YouTube search extension and update README"
+    ```
+
+4.  **Push your changes to your GitHub fork:**
+    ```bash
+    git push origin main
+    ```
+    (Replace `main` with your branch name if it's different, e.g., `master` or a feature branch.)
+
+5.  **Create a Pull Request (Optional):** If you intend to contribute this extension back to the main `google-gemini/gemini-cli` repository, go to your GitHub fork and create a Pull Request from your branch to the upstream `main` branch.
+   
 ---
-### 📦 Installation
+### 📦 Installation of Gemini CLI Base model (essential primary move)
 - **Quick Install**
 Run instantly with npx
 # Using npx (no installation required)
@@ -183,93 +275,4 @@ Gemini Unleashed is an experimental AI system administration framework that rede
 ---
 #### Creator Credits: Ajarn Spencer Littlewood Website; https://www.ajarnspencer.com Project Homepage; https://sites.google.com/view/gemini-cli/ YouTube: https://www.youtube.com/AjarnSpencer/
 
-## YouTube Extension
 
-This extension provides commands to search YouTube and retrieve video transcripts directly from the Gemini CLI.
-
-### Installation
-
-To install and set up the YouTube extension, follow these steps:
-
-1.  **Clone the `gemini-cli` repository:**
-    ```bash
-    git clone https://github.com/google-gemini/gemini-cli.git
-    cd gemini-cli
-    ```
-    (If you already have a fork, ensure it's up to date and navigate to your local clone.)
-
-2.  **Navigate to the extensions directory:**
-    ```bash
-    cd .gemini/extensions/youtube
-    ```
-
-3.  **Create a Python virtual environment:**
-    ```bash
-    python3 -m venv venv
-    ```
-
-4.  **Activate the virtual environment:**
-    ```bash
-    source venv/bin/activate
-    ```
-
-5.  **Install the required Python packages:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-6.  **Ensure the `yt_tool.py` script uses the virtual environment's Python interpreter.**
-    The shebang line in `yt_tool.py` should be updated to point to the virtual environment's Python. This should already be configured if you're using the version I helped set up. Verify the first line of `yt_tool.py` is:
-    ```
-    #!/home/cicada/.gemini/extensions/youtube/venv/bin/python
-    ```
-    (Note: The path `/home/cicada/.gemini/` might vary depending on your installation location. Adjust accordingly.)
-
-### Usage
-
-Once installed, you can use the YouTube extension commands:
-
-*   **Search YouTube:**
-    ```
-    /youtube:search "your search query"
-    ```
-    Example: `/youtube:search "the best tacos in tijuana"`
-
-*   **Get Video Transcript:**
-    ```
-    /youtube:transcript "video URL"
-    ```
-    Example: `/youtube:transcript "https://www.youtube.com/watch?v=totqat8vAIw"`
-
-### Committing to GitHub
-
-After setting up the extension locally and verifying its functionality, you can commit these changes to your GitHub fork:
-
-1.  **Navigate back to the root of your `gemini-cli` repository:**
-    ```bash
-    cd /path/to/your/gemini-cli-fork
-    ```
-
-2.  **Add the new and modified files to your Git staging area:**
-    ```bash
-    git add .gemini/extensions/youtube/gemini-extension.json
-    git add .gemini/extensions/youtube/commands/search.toml
-    git add .gemini/extensions/youtube/commands/transcript.toml
-    git add .gemini/extensions/youtube/scripts/yt_tool.py
-    git add .gemini/extensions/youtube/requirements.txt
-    git add README.md
-    ```
-    (Note: Do NOT `git add .gemini/extensions/youtube/venv/` as virtual environments should not be committed.)
-
-3.  **Commit your changes:**
-    ```bash
-    git commit -m "feat: Add YouTube search extension and update README"
-    ```
-
-4.  **Push your changes to your GitHub fork:**
-    ```bash
-    git push origin main
-    ```
-    (Replace `main` with your branch name if it's different, e.g., `master` or a feature branch.)
-
-5.  **Create a Pull Request (Optional):** If you intend to contribute this extension back to the main `google-gemini/gemini-cli` repository, go to your GitHub fork and create a Pull Request from your branch to the upstream `main` branch.
