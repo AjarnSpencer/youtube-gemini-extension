@@ -11,7 +11,7 @@
 ---
 Make sure Nodejs 20 or above is installed on your system and then go to Google's Gemini-CLI page for the installation info on [gemini-cli](https://github.com/google-gemini/gemini-cli)
 Or if you prefer to just 'GO FOR IT' without reading all that is to be learned on their page;
-- **Copy the files in the .gemini filder here into the .gemini folder in your home/user/ folder**: https://github.com/AjarnSpencer/youtube-gemini-extension/tree/main/.gemini
+- **Copy the files in the .gemini folder here into the .gemini folder in your home/user/ folder**: https://github.com/AjarnSpencer/youtube-gemini-extension/tree/main/.gemini
 ---
 ### 📦 Installation
 - **Quick Install**
