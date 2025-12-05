@@ -1,4 +1,4 @@
-# 🜂 YouTube search for Gemini CLI
+# 🜂 YouTube search for Gemini CLI UNLEASHED
 **Author:** Ajarn Spencer Littlewood in Collaboration with Gemini cLI Unleashed
 
 **Project Type:** Gemini CLI Unleashed Experimental AI System Administration Framework extensions
