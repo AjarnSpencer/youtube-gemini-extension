@@ -1,7 +1,10 @@
 # 🜂 YouTube search for Gemini CLI
 **Author:** Ajarn Spencer Littlewood in Collaboration with Gemini cLI Unleashed
+
 **Project Type:** Gemini CLI Unleashed Experimental AI System Administration Framework extensions
+
 **Version:** 1.0  
+
 **License:** Open Use with Attribution  
 ![Gemini Unleashed System Admin Protocol](https://github.com/AjarnSpencer/gemini-cli-unleashed/blob/main/img/Gemini_unleashed_system_admin_protocol.png "Gemini CLI Unleashed")
 
