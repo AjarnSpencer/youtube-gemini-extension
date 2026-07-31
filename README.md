@@ -1,7 +1,7 @@
-# 🜂 YouTube search for Gemini CLI UNLEASHED
+# 🜂 YouTube search for Gemini CLI - NOW MOVED TO ANTIGRAVITY UNLEASHED
 **Author:** Ajarn Spencer Littlewood in Collaboration with Gemini cLI Unleashed
 
-**Project Type:** Gemini CLI Unleashed Experimental AI System Administration Framework extensions
+**Project Type:** Gemini CLI Unleashed Experimental AI System Administration Framework extensions installable by migration in antigravity
 
 **Version:** 1.0  
 
